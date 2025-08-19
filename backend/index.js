@@ -17,6 +17,12 @@ app.get("/", (req, res) => {
     return res.status(200).json({ success: true, message: "Welcome to the API" });
 })
 
+app.get("/health",(req,res)=>{
+    return res.status(200).json({
+        message:"I am healthy and happy :)"
+    })
+})
+
 app.listen(process.env.PORT || 3000, () => {
     console.log(`Server is running on port ${process.env.PORT || 3000}`);
 });
